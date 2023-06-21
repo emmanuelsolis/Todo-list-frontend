@@ -1,13 +1,16 @@
+import { TodoProvider } from "./context/TodoProvider";
+import { Title } from "./components/Title";
 import { TodoList } from "./components/TodoList";
+import '../index.css'
 
-export function Todo() {
-    
+export const Todo = () => {
 
-    return (
-        <>
-            <h1>Todo:</h1>
-            <TodoList />
-        </>
-    )
+  return (
+    <TodoProvider>
+        <Title />
+        <TodoList />
+    </TodoProvider>
+  )
 }
+
 
